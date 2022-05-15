@@ -1,7 +1,7 @@
 class Certonid < Formula
-  CERTONID_VERSION = '0.9.1'
+  CERTONID_VERSION = "0.9.1".freeze
 
-  desc "Certonid"
+  desc "A Serverless SSH Certificate Authority"
   homepage "https://github.com/certonid/certonid"
   version CERTONID_VERSION
 
@@ -37,6 +37,6 @@ class Certonid < Formula
   end
 
   test do
-    system "#{bin}/certonid --version"
+    system "#{bin}/certonid", "--version"
   end
 end
