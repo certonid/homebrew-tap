@@ -1,7 +1,7 @@
 class Certonid < Formula
   CERTONID_VERSION = "0.9.1".freeze
 
-  desc "A Serverless SSH Certificate Authority"
+  desc "Serverless SSH Certificate Authority"
   homepage "https://github.com/certonid/certonid"
   version CERTONID_VERSION
 
