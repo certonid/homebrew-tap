@@ -30,8 +30,6 @@ class Certonid < Formula
     sha256 "3f67cb72802d159cd70a26f9899444d78658caac5232bed9e729e89062d041ad"
   end
 
-  conflicts_with "certonid"
-
   def install
     bin.install "certonid"
   end
