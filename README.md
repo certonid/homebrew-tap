@@ -1,4 +1,4 @@
-# Certonid Homebrew Tap
+# Certonid Homebrew Tap [![brew test-bot](https://github.com/certonid/homebrew-tap/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/certonid/homebrew-tap/actions/workflows/tests.yml)
 
 ## What is Homebrew?
 
