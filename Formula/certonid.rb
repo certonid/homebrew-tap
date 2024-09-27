@@ -5,21 +5,21 @@
 class Certonid < Formula
   desc "Serverless SSH Certificate Authority"
   homepage "https://github.com/certonid/certonid"
-  version "0.9.10"
+  version "0.9.11"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/certonid/certonid/releases/download/0.9.10/certonid_Darwin_x86_64.tar.gz"
-      sha256 "2ef3d7c0f3588cccfb5b1ebb55a1f1a4c9a126627edbe4dff05ad9eecb9f20d6"
+    on_intel do
+      url "https://github.com/certonid/certonid/releases/download/0.9.11/certonid_Darwin_x86_64.tar.gz"
+      sha256 "1afb82aaa3d42c5c4644e45533a88d32837325ffad769aa1f3923a98f1215387"
 
       def install
         bin.install "certonid"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/certonid/certonid/releases/download/0.9.10/certonid_Darwin_arm64.tar.gz"
-      sha256 "68fee4e58ca672ef976c80ef158c0725164c74a47471563571433bad6f384f02"
+    on_arm do
+      url "https://github.com/certonid/certonid/releases/download/0.9.11/certonid_Darwin_arm64.tar.gz"
+      sha256 "520bbd28afa58584b851c479303d258a17fc610e4902d42737338d9fc65507bb"
 
       def install
         bin.install "certonid"
@@ -28,28 +28,34 @@ class Certonid < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/certonid/certonid/releases/download/0.9.10/certonid_Linux_x86_64.tar.gz"
-      sha256 "387b32c14c248de494b168b90233aad627c7f44e367dd65389e71f363cc574fe"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/certonid/certonid/releases/download/0.9.11/certonid_Linux_x86_64.tar.gz"
+        sha256 "be7b3648f10ba25a3498c2e9239f37c80743283534e71ea2b9c1d8c8bb17bf77"
 
-      def install
-        bin.install "certonid"
+        def install
+          bin.install "certonid"
+        end
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/certonid/certonid/releases/download/0.9.10/certonid_Linux_arm.tar.gz"
-      sha256 "134b0bdcf442aeaf139985ed37e20ac383dc63aa72731dc38d540c4f80174fc1"
+    on_arm do
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/certonid/certonid/releases/download/0.9.11/certonid_Linux_arm.tar.gz"
+        sha256 "e3756cc29b32727505e586e4db9aaa2972aa616ce708c1ce0f377ddb8fa60591"
 
-      def install
-        bin.install "certonid"
+        def install
+          bin.install "certonid"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/certonid/certonid/releases/download/0.9.10/certonid_Linux_arm64.tar.gz"
-      sha256 "12e9e66d442aa4f722174546a6f1a3b7856fe546b0501fed396df19972d7729d"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/certonid/certonid/releases/download/0.9.11/certonid_Linux_arm64.tar.gz"
+        sha256 "0c93040958743be2dace3ff251c9e46021c340b151911f8e6675127720ee04a0"
 
-      def install
-        bin.install "certonid"
+        def install
+          bin.install "certonid"
+        end
       end
     end
   end
