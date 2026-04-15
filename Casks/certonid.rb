@@ -5,22 +5,22 @@ cask "certonid" do
   on_macos do
     on_intel do
       url "https://github.com/certonid/certonid/releases/download/#{version}/certonid_Darwin_x86_64.tar.gz"
-      sha256 "cec03a31c5a1e91f36f3997cbbc4d0ad95f939cd85ba7b1e66ecb7e46e62e312"
+      sha256 "49375a0a29aeca2bb06381040545e62ebd0f557d8962b37b46fedc43743075af"
     end
     on_arm do
       url "https://github.com/certonid/certonid/releases/download/#{version}/certonid_Darwin_arm64.tar.gz"
-      sha256 "46c96a508f23aa7f95d09336eefdf86a5ae5b7a61ed00e5d983c746995f8b093"
+      sha256 "41da1a9a6ba7874d974e2a3a6805a5205d0b4f111f3d2dda60ee636797794fe4"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/certonid/certonid/releases/download/#{version}/certonid_Linux_x86_64.tar.gz"
-      sha256 "5407676109c5189bc253c99b79c0da42dbd9d484120e21133c12d660ad796e95"
+      sha256 "7f43b2930957e966d83fe6a018104adfeb82eb910da8666585fda66f90b24c15"
     end
     on_arm do
       url "https://github.com/certonid/certonid/releases/download/#{version}/certonid_Linux_arm64.tar.gz"
-      sha256 "8978f70aa9a30697626bae8bc75aa1a698e26368ce80f523afb307f4f9b6f1d7"
+      sha256 "99b94687becbb9d580eb37d3ea91e04e92aa6312b8ba07e4e534e586474e79f8"
     end
   end
 
